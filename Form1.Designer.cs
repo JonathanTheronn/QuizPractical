@@ -50,6 +50,7 @@ namespace QuizPractical
             this.btnRead.TabIndex = 1;
             this.btnRead.Text = "Read File";
             this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // Form1
             // 

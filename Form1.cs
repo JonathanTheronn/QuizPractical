@@ -18,12 +18,15 @@ namespace QuizPractical
             InitializeComponent();
         }
         
-        public void btnRead_Click(object sender, EventArgs e)
+        private void btnRead_Click(object sender, EventArgs e)
         {
             List<string> dataList = new List<string>();
-            dataList =  File.ReadAllLines("myfile.txt").ToList();
-            
+            dataList = File.ReadAllLines("myfile.txt").ToList();
+
+
             listBox.DataSource = dataList;
         }
+
+        
     }
 }

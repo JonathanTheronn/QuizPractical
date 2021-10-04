@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace QuizPractical
 {
@@ -15,6 +16,14 @@ namespace QuizPractical
         public Form1()
         {
             InitializeComponent();
+        }
+        
+        public void btnRead_Click(object sender, EventArgs e)
+        {
+            List<string> dataList = new List<string>();
+            dataList =  File.ReadAllLines("myfile.txt").ToList();
+            
+            listBox.DataSource = dataList;
         }
     }
 }
